@@ -25,23 +25,70 @@
 
     <main>
       <section class="hero glass">
-        <div class="map-card" aria-label="Costa Rica to Switzerland love map">
-          <div class="country country-left">
-            <span class="pin"></span>
-            <strong>Costa Rica</strong>
+        <div class="map-card" aria-label="A romantic route connecting Costa Rica and Switzerland">
+          <div class="map-topline">
+            <span>ACROSS THE WORLD</span>
+            <span class="map-topline-heart" aria-hidden="true">♡</span>
           </div>
-          <svg viewBox="0 0 360 120" role="img" aria-label="A heart connecting Costa Rica and Switzerland">
-            <path class="route" d="M36,88 C120,10 240,10 324,88" />
-            <circle cx="36" cy="88" r="5" />
-            <circle cx="324" cy="88" r="5" />
-            <text x="180" y="48" text-anchor="middle">♥</text>
-          </svg>
-          <div class="country country-right">
-            <span class="pin"></span>
-            <strong>Switzerland</strong>
+
+          <div class="map-scene">
+            <div class="location-card location-costa">
+              <span class="location-flag" aria-hidden="true">🇨🇷</span>
+              <span class="location-copy">
+                <small>FROM</small>
+                <strong>Costa Rica</strong>
+              </span>
+            </div>
+
+            <svg class="love-route" viewBox="0 0 600 230" role="img" aria-label="A dotted route between Costa Rica and Switzerland">
+              <defs>
+                <linearGradient id="routeGradient" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#dca19a" />
+                  <stop offset="50%" stop-color="#c87873" />
+                  <stop offset="100%" stop-color="#dca19a" />
+                </linearGradient>
+                <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path class="route-glow" d="M72,188 C190,18 410,18 528,188" />
+              <path class="route" d="M72,188 C190,18 410,18 528,188" />
+              <circle class="route-dot" cx="72" cy="188" r="7" />
+              <circle class="route-dot" cx="528" cy="188" r="7" />
+            </svg>
+
+            <div class="heart-marker" aria-hidden="true">
+              <span>♥</span>
+              <small>US</small>
+            </div>
+
+            <div class="location-card location-swiss">
+              <span class="location-flag" aria-hidden="true">🇨🇭</span>
+              <span class="location-copy">
+                <small>TO</small>
+                <strong>Switzerland</strong>
+              </span>
+            </div>
+
+            <span class="map-star map-star-one" aria-hidden="true">✦</span>
+            <span class="map-star map-star-two" aria-hidden="true">✧</span>
+            <span class="map-star map-star-three" aria-hidden="true">·</span>
+          </div>
+
+          <div class="map-caption" aria-hidden="true">
+            <span></span>
+            <p>Two countries · One love</p>
+            <span></span>
           </div>
         </div>
-        <p class="hero-quote" id="heroQuote">No matter the distance, I will always find my way back to you.</p>
+        <div class="hero-quote-wrap">
+          <span class="quote-heart" aria-hidden="true">♥</span>
+          <p class="hero-quote" id="heroQuote">No matter the distance, I will always find my way back to you.</p>
+        </div>
         <div class="countdown" id="countdownCard">
           <span class="eyebrow">UNTIL OUR NEXT ADVENTURE</span>
           <div id="countdownValue">Set a date in Customize</div>
